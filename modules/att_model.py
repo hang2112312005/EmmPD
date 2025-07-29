@@ -7,10 +7,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.utils.rnn import PackedSequence, pack_padded_sequence, pad_packed_sequence
 
-import modules.utils as utils
-from modules.caption_model import CaptionModel
-
-
 def sort_pack_padded_sequence(input, lengths):
     sorted_lengths, indices = torch.sort(lengths, descending=True)
     tmp = pack_padded_sequence(input[indices], sorted_lengths, batch_first=True)
@@ -33,7 +29,7 @@ def pack_wrapper(module, att_feats, att_masks):
         return module(att_feats)
 
 
-class AttModel(CaptionModel):
+class AttModel(nn.Module):
     def __init__(self, args):
         super(AttModel, self).__init__()
         self.args = args
@@ -43,13 +39,13 @@ class AttModel(CaptionModel):
         self.rnn_size = args.d_ff
         self.num_layers = args.num_layers
         self.drop_prob_lm = args.drop_prob_lm
-        self.max_seq_length = args.max_seq_length
+        # self.max_seq_length = args.max_seq_length
         self.att_feat_size = args.d_vf
         self.att_hid_size = args.d_model
-
-        self.bos_idx = args.bos_idx
-        self.eos_idx = args.eos_idx
-        self.pad_idx = args.pad_idx
+        #
+        # self.bos_idx = args.bos_idx
+        # self.eos_idx = args.eos_idx
+        # self.pad_idx = args.pad_idx
 
         self.use_bn = args.use_bn
 

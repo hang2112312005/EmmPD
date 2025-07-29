@@ -15,8 +15,6 @@ class BaseDataset(Dataset):
         self.split_path = args.base_dir + 'splits_cameylon_1.csv'
         self.dataset_name = args.dataset_name
         self.n_classes = args.n_classes
-        self.max_seq_length = args.max_seq_length
-        self.max_fea_length = args.max_fea_length
         self.split = split
         self.transform = transform
 
@@ -28,7 +26,7 @@ class BaseDataset(Dataset):
         # load labels
         self.labels = self._load_labels()
 
-        BERT_PATH = './ckpts/Bert'
+        BERT_PATH = './Text_encoder'
         self.tokenizer = BertTokenizer.from_pretrained(BERT_PATH)
         self.bert = BertModel.from_pretrained(BERT_PATH)
         self.bert.eval()

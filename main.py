@@ -23,10 +23,10 @@ def parse_agrs():
                         default='./Dataset/cameylon+/',
                         help='the path to the directory containing the encoded wsi patches.')
     parser.add_argument('--image_dir', type=str,
-                        default='./Dataset/cameylon+/UNI_2D_h5_files_w_4_4',
+                        default='./camlyon+/h5_files',
                         help='the path to the directory containing the encoded wsi patches.')
     parser.add_argument('--ann_path', type=str,
-                        default='./Dataset/cameylon+/h5py-files',
+                        default='./cameylon+/h5py-files',
                         help='the path to the directory containing the data.')
     # Data loader settings
     parser.add_argument('--dataset_name', type=str, default='camelyon', choices=['TCGA',], help='the dataset to be used.')
@@ -47,7 +47,7 @@ def parse_agrs():
     parser.add_argument('--drop_prob_lm', type=float, default=0.5, help='the dropout rate of the output layer.')
 
     # Trainer settings
-    parser.add_argument('--n_gpu', type=str, default='4', help='the  gpus to be used.')
+    parser.add_argument('--n_gpu', type=str, default='2', help='the  gpus to be used.')
     parser.add_argument('--epochs', type=int, default=80, help='the number of training epochs.')
     parser.add_argument('--epochs_val', type=int, default=2, help='interval between eval epochs')
     parser.add_argument('--start_val', type=int, default=2, help='start eval epochs')
@@ -88,7 +88,7 @@ def parse_agrs():
 
 def setup(rank, world_size):
     os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = '30398'
+    os.environ['MASTER_PORT'] = '30300'
 
     # initialize the process group
     dist.init_process_group("nccl", rank=rank, world_size=world_size)
