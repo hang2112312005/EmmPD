@@ -48,7 +48,7 @@ python main.py --mode 'Test' --base_dir <SLIDE FEATURE PATH> --image_dir <SLIDE 
 ```
 
 ## Acknowledgment
-This codebase is based on [ViLa-MIL](https://github.com/Jiangbo-Shi/ViLa-MIL) and [CLAM](https://github.com/mahmoodlab/CLAM). Many thanks to the authors of these great projects!
+This codebase is based on [WsiCaption](https://github.com/cpystan/Wsi-Caption/tree/master) and [CLAM](https://github.com/mahmoodlab/CLAM). Many thanks to the authors of these great projects!
 
 ## Issues
 - Please open new threads or report issues directly (for urgent blockers) to `51285904046@stu.ecnu.edu.cn`
