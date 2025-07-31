@@ -1,7 +1,7 @@
 # EmmPD
 
 Efficient Multi-Slide Visual-Language Feature Fusion for Placental Disease Classification, **ACM MM'25**\
-*Hang Guo, Qing Zhang, Zixuan Gao, SIYUAN YANG, Shulin Peng, Tao Xiang, Ting Yu, Yan Wang, Qingli Li*
+*Hang Guo, Qing Zhang, Zixuan Gao, Siyuan Yang, Shulin Peng, Xiang Tao, Ting Yu, Yan Wang, Qingli Li*
 
 [[ArXiv]]()
 
@@ -54,6 +54,12 @@ This codebase is based on [WsiCaption](https://github.com/cpystan/Wsi-Caption/tr
 - Please open new threads or report issues directly (for urgent blockers) to `51285904046@stu.ecnu.edu.cn`
 
 ## Reference
-If you find our work useful in your research, please consider citing our paper at::
+If you find our work useful in your research, please consider citing our paper at:
 ```
+@article{guo2025EmmPD,
+  title={Efficient Multi-Slide Visual-Language Feature Fusion for Placental Disease Classification},
+  author={Hang Guo, Qing Zhang, Zixuan Gao, Siyuan Yang, Shulin Peng, Xiang Tao, Ting Yu, Yan Wang, Qingli Li},
+  journal={ACM International Conference on Multimedia},
+  year={2025}
+}
 ```
